@@ -63,9 +63,9 @@ class Body extends StatelessWidget {
                 itemCount: products.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3,
-                  mainAxisSpacing: KdefaultPaddin / 2.5,
-                  crossAxisSpacing: KdefaultPaddin / 2.5,
-                  childAspectRatio: 0.84,
+                  mainAxisSpacing: KdefaultPaddin / 2.2,
+                  crossAxisSpacing: KdefaultPaddin / 2.2,
+                  childAspectRatio: 0.7,
                 ),
                 itemBuilder: (context, index) => ProductCard(
                   product: products[index],
