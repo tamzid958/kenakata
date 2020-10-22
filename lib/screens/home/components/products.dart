@@ -29,7 +29,7 @@ class ItemCard extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
               color: Colors.black87,
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: BorderRadius.circular(7),
             ),
             child: Column(
               children: <Widget>[
@@ -38,7 +38,7 @@ class ItemCard extends StatelessWidget {
                   margin: EdgeInsets.only(left: 50),
                   child: IconButton(
                     icon: Icon(Icons.favorite),
-                    color: Colors.red,
+                    color: Colors.red[700],
                     onPressed: () {},
                   ),
                 ),

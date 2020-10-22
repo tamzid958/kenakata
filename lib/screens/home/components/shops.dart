@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:kenakata/models/shop.dart';
 
 class ShopCard extends StatelessWidget {
@@ -23,7 +24,7 @@ class ShopCard extends StatelessWidget {
           child: Row(
             children: <Widget>[
               Container(
-                width: 250,
+                width: 220,
                 margin: EdgeInsets.only(right: 20),
                 height: categoryHeight,
                 decoration: BoxDecoration(
@@ -48,18 +49,35 @@ class ShopCard extends StatelessWidget {
                             color: Colors.white,
                             fontWeight: FontWeight.bold),
                       ),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Row(
                         children: <Widget>[
                           Text(
-                            "Rating: " + shop.rating.toString(),
+                            "Rating: ",
                             style: TextStyle(fontSize: 14, color: Colors.white),
                           ),
-                          IconButton(
-                              icon: Icon(Icons.star),
-                              color: Colors.orange[700],
-                              iconSize: 16,
-                              onPressed: () {}),
+                          RatingBar(
+                            initialRating: shop.rating,
+                            itemSize: 15,
+                            minRating: 1,
+                            direction: Axis.horizontal,
+                            allowHalfRating: true,
+                            itemCount: 5,
+                            itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
+                            itemBuilder: (context, _) => Icon(
+                              Icons.star,
+                              color: Colors.orange[900],
+                            ),
+                            onRatingUpdate: (rating) {
+                              print(rating);
+                            },
+                          )
                         ],
+                      ),
+                      SizedBox(
+                        height: 20,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
