@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:kenakata/constants.dart';
 import 'package:kenakata/models/product.dart';
+import 'package:kenakata/screens/itemdetails/components/add_to_cart_and_visit_shop.dart';
 import 'package:kenakata/screens/itemdetails/components/productTitleWithImage.dart';
 import 'package:kenakata/screens/itemdetails/components/wishlist_measured_unit.dart';
 import 'package:kenakata/screens/itemdetails/components/description.dart';
-import 'package:kenakata/screens/itemdetails/components/add_to_cart.dart';
+import 'package:kenakata/screens/itemdetails/components/availability.dart';
 
 class Body extends StatelessWidget {
   final Product product;
@@ -50,32 +51,11 @@ class Body extends StatelessWidget {
                         children: <Widget>[
                           WishlistMeasuredUnit(product: product),
                           Description(product: product),
-                          AddToCart(),
+                          Availibity(product: product),
                           SizedBox(
                             height: 25,
                           ),
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              Row(children: [
-                                FlatButton(
-                                  onPressed: () => {},
-                                  color: Colors.black,
-                                  padding: EdgeInsets.all(5.0),
-                                  minWidth: 320,
-                                  height: 50,
-                                  textColor: Colors.white,
-                                  child: Row(
-                                    // Replace with a Row for horizontal icon + text
-                                    children: <Widget>[
-                                      Text("Visit Shop"),
-                                      Icon(Icons.arrow_forward_ios),
-                                    ],
-                                  ),
-                                ),
-                              ]),
-                            ],
-                          ),
+                          AddToCart(),
                         ],
                       ),
                     ),
