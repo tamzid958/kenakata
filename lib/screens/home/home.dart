@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:kenakata/constants.dart';
 import 'package:kenakata/screens/home/components/body.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -24,6 +23,7 @@ AppBar buildAppBar() {
         SvgPicture.asset(
           "assets/images/logo.svg",
           fit: BoxFit.contain,
+          color: Colors.orange[900],
           height: 30,
         ),
       ],
@@ -31,17 +31,17 @@ AppBar buildAppBar() {
     actions: <Widget>[
       IconButton(
         icon: Icon(Icons.notifications_rounded),
-        color: kTextColor,
+        color: Colors.black87,
         onPressed: () {},
       ),
       IconButton(
         icon: Icon(Icons.add_shopping_cart_rounded),
-        color: kTextColor,
+        color: Colors.black87,
         onPressed: () {},
       ),
       IconButton(
         icon: Icon(Icons.person),
-        color: kTextColor,
+        color: Colors.black87,
         onPressed: () {},
       )
     ],

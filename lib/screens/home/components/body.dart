@@ -5,6 +5,7 @@ import 'package:kenakata/models/shop.dart';
 import 'package:kenakata/screens/home/components/products.dart';
 import 'package:kenakata/screens/home/components/shops.dart';
 import 'search_location.dart';
+import 'package:kenakata/screens/itemdetails/details_screen.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -42,8 +43,13 @@ class Body extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                           fontSize: 12),
                     ),
-                    IconButton(
-                        icon: Icon(Icons.arrow_forward), onPressed: () {}),
+                    RotatedBox(
+                      quarterTurns: 1,
+                      child: IconButton(
+                          color: Colors.orange[900],
+                          icon: Icon(Icons.arrow_circle_up),
+                          onPressed: () {}),
+                    )
                   ],
                 ),
               ],
@@ -60,8 +66,16 @@ class Body extends StatelessWidget {
                   crossAxisSpacing: KdefaultPaddin / 2,
                   childAspectRatio: 0.7,
                 ),
-                itemBuilder: (context, index) => ItemCard(
+                itemBuilder: (context, index) => ProductCard(
                   product: products[index],
+                  press: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => DetailsScreen(
+                        product: products[index],
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),

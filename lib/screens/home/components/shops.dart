@@ -54,8 +54,10 @@ class ShopCard extends StatelessWidget {
                           children: <Widget>[
                             Text(
                               "Rating: " + shop.rating.toString(),
-                              style:
-                                  TextStyle(fontSize: 14, color: Colors.white),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
                             ),
                             IconButton(
                                 icon: Icon(Icons.star),
@@ -70,13 +72,18 @@ class ShopCard extends StatelessWidget {
                         children: <Widget>[
                           Text(
                             "Visit Now",
-                            style: TextStyle(fontSize: 14, color: Colors.white),
+                            style: TextStyle(
+                                fontSize: 12,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
                           ),
-                          IconButton(
-                              icon: Icon(Icons.arrow_forward_rounded),
-                              color: Colors.white,
-                              iconSize: 14,
-                              onPressed: () {}),
+                          RotatedBox(
+                            quarterTurns: 1,
+                            child: IconButton(
+                                color: Colors.white,
+                                icon: Icon(Icons.arrow_circle_up),
+                                onPressed: () {}),
+                          )
                         ],
                       ),
                     ],
