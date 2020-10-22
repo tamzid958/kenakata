@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:kenakata/models/shop.dart';
 
 class ShopCard extends StatelessWidget {
@@ -24,7 +23,7 @@ class ShopCard extends StatelessWidget {
           child: Row(
             children: <Widget>[
               Container(
-                width: 220,
+                width: 250,
                 margin: EdgeInsets.only(right: 20),
                 height: categoryHeight,
                 decoration: BoxDecoration(
@@ -49,35 +48,22 @@ class ShopCard extends StatelessWidget {
                             color: Colors.white,
                             fontWeight: FontWeight.bold),
                       ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: <Widget>[
-                          Text(
-                            "Rating: ",
-                            style: TextStyle(fontSize: 14, color: Colors.white),
-                          ),
-                          RatingBar(
-                            initialRating: shop.rating,
-                            itemSize: 15,
-                            minRating: 1,
-                            direction: Axis.horizontal,
-                            allowHalfRating: true,
-                            itemCount: 5,
-                            itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
-                            itemBuilder: (context, _) => Icon(
-                              Icons.star,
-                              color: Colors.orange[900],
+                      Padding(
+                        padding: const EdgeInsets.only(left: 2),
+                        child: Row(
+                          children: <Widget>[
+                            Text(
+                              "Rating: " + shop.rating.toString(),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white),
                             ),
-                            onRatingUpdate: (rating) {
-                              print(rating);
-                            },
-                          )
-                        ],
-                      ),
-                      SizedBox(
-                        height: 20,
+                            IconButton(
+                                icon: Icon(Icons.star),
+                                color: Colors.orange[700],
+                                iconSize: 16,
+                                onPressed: () {}),
+                          ],
+                        ),
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
