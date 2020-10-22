@@ -19,12 +19,12 @@ class ItemCard extends StatelessWidget {
           elevation: 0,
           child: Container(
             padding: EdgeInsets.symmetric(horizontal: KdefaultPaddin / 4),
-            height: 150,
-            width: 150,
+            height: 130,
+            width: 100,
             decoration: BoxDecoration(
               image: DecorationImage(
                 colorFilter: ColorFilter.mode(
-                    Colors.white.withOpacity(0.4), BlendMode.dstIn),
+                    Colors.white.withOpacity(0.3), BlendMode.dstIn),
                 image: AssetImage(product.image),
                 fit: BoxFit.cover,
               ),
@@ -35,7 +35,7 @@ class ItemCard extends StatelessWidget {
               children: <Widget>[
                 Container(
                   alignment: Alignment.topRight,
-                  // margin: EdgeInsets.only(top: 10.0, bottom: 5.0),
+                  margin: EdgeInsets.only(left: 50),
                   child: IconButton(
                     icon: Icon(Icons.favorite),
                     color: Colors.red,
@@ -44,7 +44,7 @@ class ItemCard extends StatelessWidget {
                 ),
                 Container(
                   alignment: Alignment.bottomLeft,
-                  margin: EdgeInsets.only(top: 55.0, bottom: 2.0, left: 5),
+                  margin: EdgeInsets.only(top: 35.0, bottom: 0.0, left: 5),
                   child: Text(
                     product.title,
                     style: TextStyle(
