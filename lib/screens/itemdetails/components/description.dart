@@ -12,7 +12,7 @@ class Description extends StatelessWidget {
         child: Text(
           product.description,
           textAlign: TextAlign.justify,
-          style: TextStyle(height: 1.2, fontSize: 12),
+          style: TextStyle(height: 1.2, fontSize: 16),
         ));
   }
 }
