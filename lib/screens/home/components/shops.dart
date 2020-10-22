@@ -16,14 +16,14 @@ class ShopCard extends StatelessWidget {
       physics: BouncingScrollPhysics(),
       scrollDirection: Axis.horizontal,
       child: Container(
-        margin: const EdgeInsets.symmetric(vertical: 20),
+        margin: const EdgeInsets.symmetric(vertical: 2),
         child: FittedBox(
           fit: BoxFit.fill,
           alignment: Alignment.topCenter,
           child: Row(
             children: <Widget>[
               Container(
-                width: 250,
+                width: 200,
                 margin: EdgeInsets.only(right: 20),
                 height: categoryHeight,
                 decoration: BoxDecoration(
@@ -34,7 +34,7 @@ class ShopCard extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                     color: Colors.black87,
-                    borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                    borderRadius: BorderRadius.all(Radius.circular(7.0))),
                 child: Padding(
                   padding: const EdgeInsets.only(
                       top: 4.0, bottom: 4.0, left: 12, right: 12),
@@ -44,7 +44,7 @@ class ShopCard extends StatelessWidget {
                       Text(
                         shop.title,
                         style: TextStyle(
-                            fontSize: 25,
+                            fontSize: 20,
                             color: Colors.white,
                             fontWeight: FontWeight.bold),
                       ),
@@ -70,11 +70,12 @@ class ShopCard extends StatelessWidget {
                         children: <Widget>[
                           Text(
                             "Visit Now",
-                            style: TextStyle(fontSize: 16, color: Colors.white),
+                            style: TextStyle(fontSize: 14, color: Colors.white),
                           ),
                           IconButton(
                               icon: Icon(Icons.arrow_forward_rounded),
                               color: Colors.white,
+                              iconSize: 14,
                               onPressed: () {}),
                         ],
                       ),
