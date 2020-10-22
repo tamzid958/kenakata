@@ -51,6 +51,31 @@ class Body extends StatelessWidget {
                           WishlistMeasuredUnit(product: product),
                           Description(product: product),
                           AddToCart(),
+                          SizedBox(
+                            height: 25,
+                          ),
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              Row(children: [
+                                FlatButton(
+                                  onPressed: () => {},
+                                  color: Colors.black,
+                                  padding: EdgeInsets.all(5.0),
+                                  minWidth: 320,
+                                  height: 50,
+                                  textColor: Colors.white,
+                                  child: Row(
+                                    // Replace with a Row for horizontal icon + text
+                                    children: <Widget>[
+                                      Text("Visit Shop"),
+                                      Icon(Icons.arrow_forward_ios),
+                                    ],
+                                  ),
+                                ),
+                              ]),
+                            ],
+                          ),
                         ],
                       ),
                     ),
