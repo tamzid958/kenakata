@@ -10,7 +10,7 @@ class Body extends StatelessWidget {
         padding: const EdgeInsets.all(20.0),
         children: [
           Center(
-            child: Lottie.asset("assets/lottiefiles/splash_screen.zip",
+            child: Lottie.asset("assets/lottiefiles/splash_screen.json",
                 repeat: true),
           ),
           Center(
