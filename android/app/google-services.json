@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1046567266731-dne24bb4ndglq6su488o9ameenggbbje.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.thebytetec.kenakata",
+            "certificate_hash": "d47495de8caf239d4ec60f6d3787d53b68306be1"
+          }
+        },
+        {
           "client_id": "1046567266731-degf2eu9qq7suu77lfbs6viqhvh0805n.apps.googleusercontent.com",
           "client_type": 3
         }
