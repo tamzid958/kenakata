@@ -20,7 +20,7 @@ class AddToCart extends StatelessWidget {
               // Replace with a Row for horizontal icon + text
               children: <Widget>[
                 Text("Add to Cart "),
-                Icon(Icons.shopping_bag),
+                Icon(Icons.shopping_bag_outlined),
               ],
             ),
           ),

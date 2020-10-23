@@ -30,17 +30,17 @@ AppBar buildAppBar() {
     ),
     actions: <Widget>[
       IconButton(
-        icon: Icon(Icons.notifications_rounded),
+        icon: Icon(Icons.notifications_outlined),
         color: Colors.black87,
         onPressed: () {},
       ),
       IconButton(
-        icon: Icon(Icons.add_shopping_cart_rounded),
+        icon: Icon(Icons.shopping_bag_outlined),
         color: Colors.black87,
         onPressed: () {},
       ),
       IconButton(
-        icon: Icon(Icons.person),
+        icon: Icon(Icons.person_outline_rounded),
         color: Colors.black87,
         onPressed: () {},
       )

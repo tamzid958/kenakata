@@ -26,11 +26,11 @@ class DetailsScreen extends StatelessWidget {
       ),
       actions: <Widget>[
         IconButton(
-          icon: Icon(Icons.add_shopping_cart_rounded),
+          icon: Icon(Icons.shopping_bag_outlined),
           onPressed: () {},
         ),
         IconButton(
-          icon: Icon(Icons.share),
+          icon: Icon(Icons.share_outlined),
           onPressed: () {},
         )
       ],
