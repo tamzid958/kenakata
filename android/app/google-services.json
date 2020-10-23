@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1046567266731",
+    "firebase_url": "https://kenakata-1f7d1.firebaseio.com",
+    "project_id": "kenakata-1f7d1",
+    "storage_bucket": "kenakata-1f7d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1046567266731:android:52e1250c1b81077c914aee",
+        "android_client_info": {
+          "package_name": "com.thebytetec.kenakata"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1046567266731-degf2eu9qq7suu77lfbs6viqhvh0805n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDddWbLJdMFWerM181a7ZhJp3r4neDaMBo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1046567266731-degf2eu9qq7suu77lfbs6viqhvh0805n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
