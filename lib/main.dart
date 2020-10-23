@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:kenakata/screens/splashscreen/splash_screen.dart';
 import 'constants.dart';
-import 'package:kenakata/screens/home/home.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,7 +24,8 @@ class MyApp extends StatelessWidget {
             .apply(bodyColor: kTextColor, fontFamily: "Poppins"),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomeScreen(),
+      home: SplashScreen(),
+      //home: HomeScreen(),
     );
   }
 }
