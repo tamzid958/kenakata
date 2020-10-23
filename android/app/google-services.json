@@ -30,6 +30,13 @@
             {
               "client_id": "1046567266731-degf2eu9qq7suu77lfbs6viqhvh0805n.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "1046567266731-ef96qisecikoicnglrjban88asljppbf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.thebytetec.kenakata"
+              }
             }
           ]
         }
