@@ -1,4 +1,4 @@
-package com.example.kenakata
+package com.thebytetec.kenakata
 
 import io.flutter.embedding.android.FlutterActivity
 
