@@ -4,8 +4,8 @@ import 'package:lottie/lottie.dart';
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child: SafeArea(
+    return SafeArea(
+        child: Center(
       child: ListView(
         shrinkWrap: true,
         padding: const EdgeInsets.all(20.0),
