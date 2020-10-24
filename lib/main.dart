@@ -22,6 +22,8 @@ class MyApp extends StatelessWidget {
         textTheme: Theme.of(context)
             .textTheme
             .apply(bodyColor: kTextColor, fontFamily: "Poppins"),
+        primarySwatch: Colors.orange,
+        primaryColor: Colors.orange,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: SplashScreen(),
