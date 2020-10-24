@@ -22,15 +22,18 @@ class DetailsScreen extends StatelessWidget {
       elevation: 0,
       leading: IconButton(
         icon: Icon(Icons.arrow_back_ios),
+        color: Colors.white,
         onPressed: () => Navigator.pop(context),
       ),
       actions: <Widget>[
         IconButton(
           icon: Icon(Icons.shopping_bag_outlined),
+          color: Colors.white,
           onPressed: () {},
         ),
         IconButton(
           icon: Icon(Icons.share_outlined),
+          color: Colors.white,
           onPressed: () {},
         )
       ],
