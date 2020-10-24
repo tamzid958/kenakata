@@ -5,6 +5,7 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
+        child: SafeArea(
       child: ListView(
         shrinkWrap: true,
         padding: const EdgeInsets.all(20.0),
@@ -22,6 +23,6 @@ class Body extends StatelessWidget {
           ),
         ],
       ),
-    );
+    ));
   }
 }

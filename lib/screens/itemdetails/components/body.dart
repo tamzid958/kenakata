@@ -15,7 +15,8 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Container(
+    return SafeArea(
+        child: Container(
       child: SingleChildScrollView(
         child: Column(
           children: <Widget>[
@@ -65,6 +66,6 @@ class Body extends StatelessWidget {
           ],
         ),
       ),
-    );
+    ));
   }
 }

@@ -10,9 +10,10 @@ import 'package:kenakata/screens/itemdetails/details_screen.dart';
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
+    return SafeArea(
+        child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: KdefaultPaddin),
             child: LocationPickerWidget(),
@@ -81,6 +82,6 @@ class Body extends StatelessWidget {
               ),
             ),
           ),
-        ]);
+        ]));
   }
 }
