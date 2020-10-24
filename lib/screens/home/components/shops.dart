@@ -11,20 +11,21 @@ class ShopCard extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final double categoryHeight = 150;
+    final double categoryHeight = 80;
     return SingleChildScrollView(
       physics: BouncingScrollPhysics(),
       scrollDirection: Axis.horizontal,
       child: Container(
-        margin: const EdgeInsets.symmetric(vertical: 2),
+        margin: const EdgeInsets.symmetric(vertical: 10),
         child: FittedBox(
           fit: BoxFit.fill,
           alignment: Alignment.topCenter,
           child: Row(
             children: <Widget>[
               Container(
-                width: 200,
-                margin: EdgeInsets.only(right: 20),
+                width: 100,
+                margin: EdgeInsets.only(right: 7),
+                padding: EdgeInsets.only(left: 6, top: 6),
                 height: categoryHeight,
                 decoration: BoxDecoration(
                     image: DecorationImage(
@@ -35,59 +36,58 @@ class ShopCard extends StatelessWidget {
                     ),
                     color: Colors.black87,
                     borderRadius: BorderRadius.all(Radius.circular(7.0))),
-                child: Padding(
-                  padding: const EdgeInsets.only(
-                      top: 4.0, bottom: 4.0, left: 12, right: 12),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
-                        shop.title,
-                        style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 2),
-                        child: Row(
-                          children: <Widget>[
-                            Text(
-                              "Rating: " + shop.rating.toString(),
-                              style: TextStyle(
-                                  fontSize: 14,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            IconButton(
-                                icon: Icon(Icons.star),
-                                color: Colors.orange[700],
-                                iconSize: 16,
-                                onPressed: () {}),
-                          ],
-                        ),
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      shop.title,
+                      style: TextStyle(
+                          fontSize: 10,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(height: 4),
+                    Row(
+                        // mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Text(
-                            "Visit Now",
+                            "Rating : " + shop.rating.toString(),
                             style: TextStyle(
-                                fontSize: 12,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
+                              fontSize: 7,
+                              color: Colors.white,
+                            ),
                           ),
-                          RotatedBox(
-                            quarterTurns: 1,
-                            child: IconButton(
-                                color: Colors.white,
-                                icon: Icon(Icons.arrow_circle_up),
-                                onPressed: () {}),
+                          SizedBox(width: 3),
+                          Icon(
+                            Icons.star,
+                            size: 10,
+                            color: Colors.orange[900],
                           )
-                        ],
-                      ),
-                    ],
-                  ),
+                        ]),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      //crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: <Widget>[
+                        SizedBox(height: 40),
+                        Text(
+                          "Visit Now  ",
+                          style: TextStyle(
+                              fontSize: 7,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        RotatedBox(
+                          quarterTurns: 1,
+                          child: Icon(
+                            Icons.arrow_circle_up,
+                            color: Colors.white,
+                            size: 10,
+                          ),
+                        )
+                      ],
+                    ),
+                  ],
                 ),
               ),
             ],
