@@ -26,7 +26,6 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.orange,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      builder: (context, child) => SafeArea(child: child),
       home: SplashScreen(),
       //home: HomeScreen(),
     );
