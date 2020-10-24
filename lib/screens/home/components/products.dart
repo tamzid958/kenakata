@@ -47,7 +47,7 @@ class ProductCard extends StatelessWidget {
                     ),
                     Container(
                       alignment: Alignment.bottomLeft,
-                      margin: EdgeInsets.only(top: 35.0, bottom: 0.0, left: 5),
+                      margin: EdgeInsets.only(top: 28.0, left: 5),
                       child: Text(
                         product.title,
                         style: TextStyle(
