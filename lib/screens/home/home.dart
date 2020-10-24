@@ -23,7 +23,7 @@ AppBar buildAppBar() {
         SvgPicture.asset(
           "assets/images/logo.svg",
           fit: BoxFit.contain,
-          color: Colors.orange[900],
+          width: 30,
           height: 30,
         ),
       ],
