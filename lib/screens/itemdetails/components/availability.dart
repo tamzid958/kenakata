@@ -12,7 +12,9 @@ class Availibity extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          CartCounter(),
+          CartCounter(
+            product: product,
+          ),
           Row(
             children: [
               FlatButton(
@@ -27,9 +29,11 @@ class Availibity extends StatelessWidget {
                 child: Row(
                   // Replace with a Row for horizontal icon + text
                   children: <Widget>[
-                    Text("Availability "),
+                    product.availability == false
+                        ? Text("STOCK OUT ")
+                        : Text("Availability "),
                     Icon(product.availability == false
-                        ? Icons.error
+                        ? Icons.error_outline
                         : Icons.done),
                   ],
                 ),

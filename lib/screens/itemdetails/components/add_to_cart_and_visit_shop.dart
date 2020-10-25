@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:kenakata/models/product.dart';
 
 class AddToCart extends StatelessWidget {
-  const AddToCart({Key key}) : super(key: key);
-
+  const AddToCart({Key key, @required this.product}) : super(key: key);
+  final Product product;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -10,7 +11,7 @@ class AddToCart extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           FlatButton(
-            onPressed: () => {},
+            onPressed: product.availability == true ? () => {} : () => {},
             color: Colors.orange[900],
             padding: EdgeInsets.all(5.0),
             minWidth: 150,
@@ -19,8 +20,12 @@ class AddToCart extends StatelessWidget {
             child: Row(
               // Replace with a Row for horizontal icon + text
               children: <Widget>[
-                Text("Add to Cart "),
-                Icon(Icons.shopping_bag_outlined),
+                product.availability == true
+                    ? Text("Add to Cart ")
+                    : Text("Notify Me "),
+                product.availability == true
+                    ? Icon(Icons.shopping_bag_outlined)
+                    : Icon(Icons.add_alert_outlined),
               ],
             ),
           ),

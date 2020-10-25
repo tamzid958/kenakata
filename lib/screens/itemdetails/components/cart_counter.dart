@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:kenakata/constants.dart';
+import 'package:kenakata/models/product.dart';
 
 class CartCounter extends StatefulWidget {
-  CartCounter({Key key}) : super(key: key);
-
+  CartCounter({Key key, @required this.product}) : super(key: key);
+  final Product product;
   @override
-  _CartCounterState createState() => _CartCounterState();
+  _CartCounterState createState() => _CartCounterState(product);
 }
 
 class _CartCounterState extends State<CartCounter> {
+  Product product;
+  _CartCounterState(this.product);
   int numOfItems = 1;
   @override
   Widget build(BuildContext context) {

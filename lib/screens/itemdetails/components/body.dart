@@ -56,7 +56,9 @@ class Body extends StatelessWidget {
                           SizedBox(
                             height: 25,
                           ),
-                          AddToCart(),
+                          AddToCart(
+                            product: product,
+                          ),
                         ],
                       ),
                     ),
