@@ -11,7 +11,7 @@ class AddToCart extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           FlatButton(
-            onPressed: product.availability == true ? () => {} : () => {},
+            onPressed: product.stockAmount <= 0 ? () => {} : () => {},
             color: Colors.orange[900],
             padding: EdgeInsets.all(5.0),
             minWidth: 150,
@@ -20,12 +20,12 @@ class AddToCart extends StatelessWidget {
             child: Row(
               // Replace with a Row for horizontal icon + text
               children: <Widget>[
-                product.availability == true
-                    ? Text("Add to Cart ")
-                    : Text("Notify Me "),
-                product.availability == true
-                    ? Icon(Icons.shopping_bag_outlined)
-                    : Icon(Icons.add_alert_outlined),
+                product.stockAmount <= 0
+                    ? Text("Notify Me ")
+                    : Text("Add to Cart "),
+                product.stockAmount == 0
+                    ? Icon(Icons.add_alert_outlined)
+                    : Icon(Icons.shopping_bag_outlined),
               ],
             ),
           ),

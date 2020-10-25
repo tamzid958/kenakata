@@ -10,7 +10,6 @@ class Availibity extends StatelessWidget {
     return Container(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           CartCounter(
             product: product,
@@ -18,23 +17,28 @@ class Availibity extends StatelessWidget {
           Row(
             children: [
               FlatButton(
-                onPressed: () => {},
-                color: (product.availability == false
-                    ? Colors.red[900]
-                    : Colors.green[900]),
-                padding: EdgeInsets.all(5.0),
+                onPressed: () => null,
+                color: (product.stockAmount <= 0
+                    ? Colors.red[700]
+                    : Colors.green[700]),
                 textColor: Colors.white,
                 height: 40,
                 minWidth: 150,
                 child: Row(
                   // Replace with a Row for horizontal icon + text
                   children: <Widget>[
-                    product.availability == false
+                    product.stockAmount <= 0
                         ? Text("Stock Out ")
-                        : Text("Availability "),
-                    Icon(product.availability == false
-                        ? Icons.error_outline
-                        : Icons.done),
+                        : Text(
+                            product.stockAmount < 9999
+                                ? "Availability : " +
+                                    product.stockAmount.toString()
+                                : "Availability : ∞ ",
+                            textAlign: TextAlign.center,
+                          ),
+                    Icon(
+                      product.stockAmount <= 0 ? Icons.error_outline : null,
+                    ),
                   ],
                 ),
               ),
