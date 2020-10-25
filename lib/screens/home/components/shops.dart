@@ -11,7 +11,8 @@ class ShopCard extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final double categoryHeight = 80;
+    final size = MediaQuery.of(context).size;
+    final double categoryHeight = size.height / 8;
     return SingleChildScrollView(
       physics: BouncingScrollPhysics(),
       scrollDirection: Axis.horizontal,
@@ -23,7 +24,7 @@ class ShopCard extends StatelessWidget {
           child: Row(
             children: <Widget>[
               Container(
-                width: 100,
+                width: size.width / 3.8,
                 margin: EdgeInsets.only(right: 7),
                 padding: EdgeInsets.only(left: 6, top: 6),
                 height: categoryHeight,
