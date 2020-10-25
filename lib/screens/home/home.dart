@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kenakata/screens/home/components/body.dart';
+import 'package:kenakata/screens/notifications/notifications.dart';
 
 class HomeScreen extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar(),
+      appBar: buildAppBar(context),
       body: Body(),
     );
   }
 }
 
-AppBar buildAppBar() {
+AppBar buildAppBar(BuildContext context) {
   return AppBar(
     backgroundColor: Colors.white,
     elevation: 0,
@@ -32,7 +33,12 @@ AppBar buildAppBar() {
       IconButton(
         icon: Icon(Icons.notifications_outlined),
         color: Colors.black87,
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => NotificationScreen()),
+          );
+        },
       ),
       IconButton(
         icon: Icon(Icons.shopping_bag_outlined),

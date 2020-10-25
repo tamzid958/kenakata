@@ -34,9 +34,11 @@ class _CartCounterState extends State<CartCounter> {
         buildOutlineButton(
             icon: Icons.add,
             press: () {
-              setState(() {
-                numOfItems++;
-              });
+              if (product.stockAmount > 0) {
+                setState(() {
+                  numOfItems++;
+                });
+              }
             }),
       ],
     );
