@@ -30,7 +30,7 @@ class Availibity extends StatelessWidget {
                   // Replace with a Row for horizontal icon + text
                   children: <Widget>[
                     product.availability == false
-                        ? Text("STOCK OUT ")
+                        ? Text("Stock Out ")
                         : Text("Availability "),
                     Icon(product.availability == false
                         ? Icons.error_outline
