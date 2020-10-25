@@ -19,6 +19,7 @@ class _LocationPickerWidgetState extends State<LocationPickerWidget> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           TextFormField(
+            autofocus: false,
             decoration: const InputDecoration(
               contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
               border: OutlineInputBorder(),

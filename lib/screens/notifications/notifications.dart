@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kenakata/constants.dart';
 import 'package:kenakata/screens/notifications/body.dart';
 
 class NotificationScreen extends StatelessWidget {
@@ -21,5 +22,16 @@ AppBar buildAppBar(BuildContext context) {
       color: Colors.white,
       onPressed: () => Navigator.pop(context),
     ),
+    actions: <Widget>[
+      Padding(
+        padding: const EdgeInsets.symmetric(
+            horizontal: KdefaultPaddin, vertical: KdefaultPaddin / 1.5),
+        child: Text("Notifications",
+            style: Theme.of(context)
+                .textTheme
+                .headline6
+                .copyWith(color: Colors.white)),
+      )
+    ],
   );
 }
