@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kenakata/constants.dart';
 import 'package:kenakata/models/shop.dart';
 
 class ShopCard extends StatelessWidget {
@@ -32,11 +33,11 @@ class ShopCard extends StatelessWidget {
                 decoration: BoxDecoration(
                     image: DecorationImage(
                       colorFilter: ColorFilter.mode(
-                          Colors.white.withOpacity(0.3), BlendMode.dstIn),
+                          kTextLightColor.withOpacity(0.3), BlendMode.dstIn),
                       image: AssetImage(shop.image),
                       fit: BoxFit.cover,
                     ),
-                    color: Colors.black87,
+                    color: kTextColor,
                     borderRadius: BorderRadius.all(Radius.circular(7.0))),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -45,7 +46,7 @@ class ShopCard extends StatelessWidget {
                       shop.title,
                       style: TextStyle(
                           fontSize: 10,
-                          color: Colors.white,
+                          color: kTextLightColor,
                           fontWeight: FontWeight.bold),
                     ),
                     Row(
@@ -56,13 +57,13 @@ class ShopCard extends StatelessWidget {
                             "Rating : " + shop.rating.toString(),
                             style: TextStyle(
                               fontSize: 7,
-                              color: Colors.white,
+                              color: kTextLightColor,
                             ),
                           ),
                           Icon(
                             Icons.star,
                             size: 9,
-                            color: Colors.orange[900],
+                            color: kOrangeColor,
                           )
                         ]),
                     Row(
@@ -74,12 +75,12 @@ class ShopCard extends StatelessWidget {
                           "Visit Now  ",
                           style: TextStyle(
                               fontSize: 7,
-                              color: Colors.white,
+                              color: kTextLightColor,
                               fontWeight: FontWeight.bold),
                         ),
                         Icon(
                           Icons.arrow_forward_ios,
-                          color: Colors.white,
+                          color: kTextLightColor,
                           size: 9,
                         )
                       ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:kenakata/constants.dart';
 import 'package:kenakata/screens/home/components/body.dart';
 import 'package:kenakata/screens/notifications/notifications.dart';
 
@@ -16,7 +17,7 @@ class HomeScreen extends StatelessWidget {
 
 AppBar buildAppBar(BuildContext context) {
   return AppBar(
-    backgroundColor: Colors.white,
+    backgroundColor: kTextLightColor,
     elevation: 0,
     leading: Row(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -32,7 +33,7 @@ AppBar buildAppBar(BuildContext context) {
     actions: <Widget>[
       IconButton(
         icon: Icon(Icons.notifications_outlined),
-        color: Colors.black87,
+        color: kTextColor,
         onPressed: () {
           Navigator.push(
             context,
@@ -42,12 +43,12 @@ AppBar buildAppBar(BuildContext context) {
       ),
       IconButton(
         icon: Icon(Icons.shopping_bag_outlined),
-        color: Colors.black87,
+        color: kTextColor,
         onPressed: () {},
       ),
       IconButton(
         icon: Icon(Icons.person_outline_rounded),
-        color: Colors.black87,
+        color: kTextColor,
         onPressed: () {},
       )
     ],

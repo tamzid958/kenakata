@@ -24,11 +24,11 @@ class WishlistMeasuredUnit extends StatelessWidget {
                     icon: Icon(product.wishlist == false
                         ? Icons.favorite_border
                         : Icons.favorite),
-                    color: Colors.red,
+                    color: kRedColor,
                     iconSize: 35,
                   ),
                   decoration: BoxDecoration(
-                    color: Colors.black87,
+                    color: kTextColor,
                     borderRadius: BorderRadius.all(
                       Radius.circular(7),
                     ),

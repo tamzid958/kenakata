@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kenakata/constants.dart';
 import 'package:kenakata/screens/itemdetails/components/cart_counter.dart';
 import 'package:kenakata/models/product.dart';
 
@@ -18,10 +19,8 @@ class Availibity extends StatelessWidget {
             children: [
               FlatButton(
                 onPressed: () => null,
-                color: (product.stockAmount <= 0
-                    ? Colors.red[700]
-                    : Colors.green[700]),
-                textColor: Colors.white,
+                color: (product.stockAmount <= 0 ? kRedColor : kGreenColor),
+                textColor: kTextLightColor,
                 height: 40,
                 minWidth: 150,
                 child: Row(

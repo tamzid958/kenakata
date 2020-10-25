@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kenakata/constants.dart';
 import 'package:kenakata/models/product.dart';
 import 'package:kenakata/screens/itemdetails/components/body.dart';
 
@@ -8,7 +9,7 @@ class DetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.orange[900],
+      backgroundColor: kOrangeColor,
       appBar: buildAppBar(context),
       body: Body(
         product: product,
@@ -18,22 +19,22 @@ class DetailsScreen extends StatelessWidget {
 
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.orange[900],
+      backgroundColor: kOrangeColor,
       elevation: 0,
       leading: IconButton(
         icon: Icon(Icons.arrow_back_ios),
-        color: Colors.white,
+        color: kTextLightColor,
         onPressed: () => Navigator.pop(context),
       ),
       actions: <Widget>[
         IconButton(
           icon: Icon(Icons.shopping_bag_outlined),
-          color: Colors.white,
+          color: kTextLightColor,
           onPressed: () {},
         ),
         IconButton(
           icon: Icon(Icons.share_outlined),
-          color: Colors.white,
+          color: kTextLightColor,
           onPressed: () {},
         )
       ],

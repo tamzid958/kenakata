@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kenakata/constants.dart';
 import 'package:lottie/lottie.dart';
 
 class Body extends StatelessWidget {
@@ -19,7 +20,7 @@ class Body extends StatelessWidget {
                 style: Theme.of(context)
                     .textTheme
                     .headline3
-                    .copyWith(color: Colors.white)),
+                    .copyWith(color: kTextLightColor)),
           ),
         ],
       ),

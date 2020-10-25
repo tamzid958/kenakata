@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kenakata/constants.dart';
 import 'package:kenakata/models/push_notification.dart';
 
 class NotificationCard extends StatelessWidget {
@@ -12,7 +13,7 @@ class NotificationCard extends StatelessWidget {
       child: ListTile(
         title: Text(
           pushNotification.title + " => " + pushNotification.time,
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: kTextColor),
         ),
         subtitle: Text(
           pushNotification.description,
@@ -24,7 +25,7 @@ class NotificationCard extends StatelessWidget {
             Icon(
               Icons.mark_chat_read,
               size: 20.0,
-              color: Colors.orange[900],
+              color: kOrangeColor,
             ),
           ],
         ),

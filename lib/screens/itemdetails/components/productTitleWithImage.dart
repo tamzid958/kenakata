@@ -17,14 +17,14 @@ class ProductTitleWithImage extends StatelessWidget {
         children: <Widget>[
           Text(
             product.title,
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: kTextLightColor),
           ),
           Text(
             product.shopNameByIdPerProduct,
             style: Theme.of(context)
                 .textTheme
                 .headline4
-                .copyWith(color: Colors.white, fontWeight: FontWeight.bold),
+                .copyWith(color: kTextLightColor, fontWeight: FontWeight.bold),
           ),
           Row(
             children: <Widget>[
@@ -34,7 +34,7 @@ class ProductTitleWithImage extends StatelessWidget {
                 TextSpan(
                     text: "৳" + product.price.toString(),
                     style: Theme.of(context).textTheme.headline4.copyWith(
-                        color: Colors.white, fontWeight: FontWeight.bold)),
+                        color: kTextLightColor, fontWeight: FontWeight.bold)),
               ]))
             ],
           )

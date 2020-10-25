@@ -15,11 +15,11 @@ class NotificationScreen extends StatelessWidget {
 
 AppBar buildAppBar(BuildContext context) {
   return AppBar(
-    backgroundColor: Colors.orange[900],
+    backgroundColor: kOrangeColor,
     elevation: 0,
     leading: IconButton(
       icon: Icon(Icons.arrow_back_ios),
-      color: Colors.white,
+      color: kTextLightColor,
       onPressed: () => Navigator.pop(context),
     ),
     actions: <Widget>[
@@ -30,7 +30,7 @@ AppBar buildAppBar(BuildContext context) {
             style: Theme.of(context)
                 .textTheme
                 .headline6
-                .copyWith(color: Colors.white)),
+                .copyWith(color: kTextLightColor)),
       )
     ],
   );

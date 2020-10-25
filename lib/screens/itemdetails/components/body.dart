@@ -28,11 +28,11 @@ class Body extends StatelessWidget {
                         decoration: BoxDecoration(
                       image: DecorationImage(
                         colorFilter: ColorFilter.mode(
-                            Colors.white.withOpacity(0.3), BlendMode.dstIn),
+                            kTextLightColor.withOpacity(0.3), BlendMode.dstIn),
                         image: AssetImage(product.image),
                         fit: BoxFit.cover,
                       ),
-                      color: Colors.black87,
+                      color: kTextColor,
                     )),
                     Container(
                       margin: EdgeInsets.only(top: size.height * 0.3),
@@ -42,7 +42,7 @@ class Body extends StatelessWidget {
                           left: KdefaultPaddin,
                           right: KdefaultPaddin),
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: kTextLightColor,
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(20),
                           topRight: Radius.circular(20),

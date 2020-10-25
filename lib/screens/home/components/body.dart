@@ -40,14 +40,14 @@ class Body extends StatelessWidget {
                     Text(
                       "Trending Deals",
                       style: TextStyle(
-                          color: Colors.black,
+                          color: kTextColor,
                           fontWeight: FontWeight.bold,
                           fontSize: 16),
                     ),
                     RotatedBox(
                       quarterTurns: 1,
                       child: IconButton(
-                          color: Colors.orange[900],
+                          color: kOrangeColor,
                           icon: Icon(Icons.arrow_circle_up),
                           iconSize: 30,
                           onPressed: () {}),

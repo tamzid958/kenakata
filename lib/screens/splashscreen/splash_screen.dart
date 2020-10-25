@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kenakata/constants.dart';
 import 'package:kenakata/screens/home/home.dart';
 import 'package:kenakata/screens/splashscreen/components/body.dart';
 
@@ -25,7 +26,7 @@ class SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.orange[900],
+      backgroundColor: kOrangeColor,
       body: Body(),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kenakata/constants.dart';
 import 'package:kenakata/models/product.dart';
 
 class AddToCart extends StatelessWidget {
@@ -12,11 +13,11 @@ class AddToCart extends StatelessWidget {
         children: [
           FlatButton(
             onPressed: product.stockAmount <= 0 ? () => {} : () => {},
-            color: Colors.orange[900],
+            color: kOrangeColor,
             padding: EdgeInsets.all(5.0),
             minWidth: 150,
             height: 55,
-            textColor: Colors.white,
+            textColor: kTextLightColor,
             child: Row(
               // Replace with a Row for horizontal icon + text
               children: <Widget>[
@@ -31,11 +32,11 @@ class AddToCart extends StatelessWidget {
           ),
           FlatButton(
             onPressed: () => {},
-            color: Colors.black,
+            color: kTextColor,
             padding: EdgeInsets.all(5.0),
             minWidth: 150,
             height: 55,
-            textColor: Colors.white,
+            textColor: kTextLightColor,
             child: Row(
               // Replace with a Row for horizontal icon + text
               children: <Widget>[

@@ -29,11 +29,11 @@ class ProductCard extends StatelessWidget {
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     colorFilter: ColorFilter.mode(
-                        Colors.white.withOpacity(0.3), BlendMode.dstIn),
+                        kTextLightColor.withOpacity(0.3), BlendMode.dstIn),
                     image: AssetImage(product.image),
                     fit: BoxFit.cover,
                   ),
-                  color: Colors.black87,
+                  color: kTextColor,
                   borderRadius: BorderRadius.circular(7),
                 ),
                 child: Column(
@@ -45,7 +45,7 @@ class ProductCard extends StatelessWidget {
                           icon: Icon(product.wishlist == false
                               ? Icons.favorite_border
                               : Icons.favorite),
-                          color: Colors.red,
+                          color: kRedColor,
                           onPressed: () {}),
                     ),
                     Container(
@@ -55,7 +55,7 @@ class ProductCard extends StatelessWidget {
                       child: Text(
                         product.title,
                         style: TextStyle(
-                          color: Colors.white,
+                          color: kTextLightColor,
                           fontWeight: FontWeight.w400,
                           //fontSize: 12.0,
                         ),
@@ -67,7 +67,7 @@ class ProductCard extends StatelessWidget {
                       child: Text(
                         "৳ " + product.price.toString(),
                         style: TextStyle(
-                          color: Colors.white,
+                          color: kTextLightColor,
                           fontWeight: FontWeight.bold,
                           //fontSize: 12.0,
                         ),
