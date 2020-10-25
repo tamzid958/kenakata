@@ -3,9 +3,9 @@
 Copyright License Agreement
 
 Created by:
-Tamzid Ahmed The BytetecThis
+Tamzid Ahmed The Bytetec
 
-Copyright License Agreement (this “Agreement”) is made effective as of Date between Property
+This Copyright License Agreement (this “Agreement”) is made effective as of Date between Property
 Owner, of Address, City,Zip Code and Licensed Property User, of Address, City,Zip Code.
 This Agreement shall be governed by the laws of State. This Agreement will commence on the Effective
 Date and continue until the Termination Date or until either party provides written notice of termination to the
