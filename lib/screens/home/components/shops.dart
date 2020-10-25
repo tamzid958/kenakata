@@ -12,7 +12,8 @@ class ShopCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    final double categoryHeight = size.height / 8;
+    final double shopHeight = size.height / 8;
+    final double shopWidth = size.width / 3.6;
     return SingleChildScrollView(
       physics: BouncingScrollPhysics(),
       scrollDirection: Axis.horizontal,
@@ -24,10 +25,10 @@ class ShopCard extends StatelessWidget {
           child: Row(
             children: <Widget>[
               Container(
-                width: size.width / 3.8,
+                width: shopWidth,
                 margin: EdgeInsets.only(right: 7),
                 padding: EdgeInsets.only(left: 6, top: 6),
-                height: categoryHeight,
+                height: shopHeight,
                 decoration: BoxDecoration(
                     image: DecorationImage(
                       colorFilter: ColorFilter.mode(
@@ -47,7 +48,6 @@ class ShopCard extends StatelessWidget {
                           color: Colors.white,
                           fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(height: 4),
                     Row(
                         // mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
