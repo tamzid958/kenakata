@@ -12,6 +12,9 @@ class ProductCard extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    final double productHeight = size.height / 5;
+    final double productWidth = size.width / 4;
     return GestureDetector(
         onTap: press,
         child: Column(
@@ -21,8 +24,8 @@ class ProductCard extends StatelessWidget {
               elevation: 0,
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: KdefaultPaddin / 4),
-                height: 130,
-                width: 100,
+                height: productHeight,
+                width: productWidth,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     colorFilter: ColorFilter.mode(
@@ -37,7 +40,7 @@ class ProductCard extends StatelessWidget {
                   children: <Widget>[
                     Container(
                       alignment: Alignment.topRight,
-                      margin: EdgeInsets.only(left: 50),
+                      margin: EdgeInsets.only(left: productWidth / 2),
                       child: IconButton(
                           icon: Icon(product.wishlist == false
                               ? Icons.favorite_border
@@ -47,7 +50,8 @@ class ProductCard extends StatelessWidget {
                     ),
                     Container(
                       alignment: Alignment.bottomLeft,
-                      margin: EdgeInsets.only(top: 28.0, left: 5),
+                      margin: EdgeInsets.only(
+                          top: productHeight / 5, left: productWidth / 13),
                       child: Text(
                         product.title,
                         style: TextStyle(
@@ -59,7 +63,7 @@ class ProductCard extends StatelessWidget {
                     ),
                     Container(
                       alignment: Alignment.bottomLeft,
-                      margin: EdgeInsets.only(left: 5),
+                      margin: EdgeInsets.only(left: productWidth / 13),
                       child: Text(
                         "৳ " + product.price.toString(),
                         style: TextStyle(

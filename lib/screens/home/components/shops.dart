@@ -59,10 +59,9 @@ class ShopCard extends StatelessWidget {
                               color: Colors.white,
                             ),
                           ),
-                          SizedBox(width: 3),
                           Icon(
                             Icons.star,
-                            size: 10,
+                            size: 9,
                             color: Colors.orange[900],
                           )
                         ]),
@@ -78,13 +77,10 @@ class ShopCard extends StatelessWidget {
                               color: Colors.white,
                               fontWeight: FontWeight.bold),
                         ),
-                        RotatedBox(
-                          quarterTurns: 1,
-                          child: Icon(
-                            Icons.arrow_circle_up,
-                            color: Colors.white,
-                            size: 10,
-                          ),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.white,
+                          size: 9,
                         )
                       ],
                     ),
