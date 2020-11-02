@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1046567266731-ef96qisecikoicnglrjban88asljppbf.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1046567266731-ef96qisecikoicnglrjban88asljppbf</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>1046567266731-dne24bb4ndglq6su488o9ameenggbbje.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDUn_Fy3z3b0929JEpsyX7IHp5Fs_-otOg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1046567266731</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.thebytetec.kenakata</string>
+	<key>PROJECT_ID</key>
+	<string>kenakata-1f7d1</string>
+	<key>STORAGE_BUCKET</key>
+	<string>kenakata-1f7d1.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1046567266731:ios:5d054ea955282ead914aee</string>
+	<key>DATABASE_URL</key>
+	<string>https://kenakata-1f7d1.firebaseio.com</string>
+</dict>
+</plist>
