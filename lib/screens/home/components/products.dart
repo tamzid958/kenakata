@@ -37,9 +37,10 @@ class ProductCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(7),
                 ),
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment
+                      .spaceAround, //Center Column contents vertically,
                   children: <Widget>[
                     Container(
-                      padding: EdgeInsets.only(bottom: 20.0),
                       alignment: Alignment.topRight,
                       child: IconButton(
                           icon: Icon(product.wishlist == false

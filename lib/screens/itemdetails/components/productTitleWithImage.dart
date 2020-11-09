@@ -11,7 +11,7 @@ class ProductTitleWithImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(
-          horizontal: KdefaultPaddin, vertical: KdefaultPaddin),
+          horizontal: KdefaultPaddin, vertical: KdefaultPaddin / 2),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
