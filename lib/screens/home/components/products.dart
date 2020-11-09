@@ -17,13 +17,13 @@ class ProductCard extends StatelessWidget {
     final double productWidth = size.width / 4;
     return GestureDetector(
         onTap: press,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: Stack(
+          //crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Card(
               elevation: 0,
               child: Container(
-                padding: EdgeInsets.symmetric(horizontal: KdefaultPaddin / 4),
+                padding: EdgeInsets.symmetric(horizontal: KdefaultPaddin / 2),
                 height: productHeight,
                 width: productWidth,
                 decoration: BoxDecoration(
@@ -39,8 +39,8 @@ class ProductCard extends StatelessWidget {
                 child: Column(
                   children: <Widget>[
                     Container(
+                      padding: EdgeInsets.only(bottom: 20.0),
                       alignment: Alignment.topRight,
-                      margin: EdgeInsets.only(left: productWidth / 2),
                       child: IconButton(
                           icon: Icon(product.wishlist == false
                               ? Icons.favorite_border
@@ -50,8 +50,6 @@ class ProductCard extends StatelessWidget {
                     ),
                     Container(
                       alignment: Alignment.bottomLeft,
-                      margin: EdgeInsets.only(
-                          top: productHeight / 5, left: productWidth / 13),
                       child: Text(
                         product.title,
                         style: TextStyle(
@@ -63,7 +61,6 @@ class ProductCard extends StatelessWidget {
                     ),
                     Container(
                       alignment: Alignment.bottomLeft,
-                      margin: EdgeInsets.only(left: productWidth / 13),
                       child: Text(
                         "৳ " + product.price.toString(),
                         style: TextStyle(

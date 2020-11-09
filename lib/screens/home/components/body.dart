@@ -66,7 +66,7 @@ class Body extends StatelessWidget {
                   crossAxisCount: 3,
                   mainAxisSpacing: KdefaultPaddin / 2.2,
                   crossAxisSpacing: KdefaultPaddin / 2.2,
-                  childAspectRatio: 0.7,
+                  childAspectRatio: 0.8,
                 ),
                 itemBuilder: (context, index) => ProductCard(
                   product: products[index],

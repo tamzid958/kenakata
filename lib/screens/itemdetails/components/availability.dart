@@ -8,43 +8,45 @@ class Availibity extends StatelessWidget {
   final Product product;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          CartCounter(
-            product: product,
-          ),
-          Row(
-            children: [
-              FlatButton(
-                onPressed: () => null,
-                color: (product.stockAmount <= 0 ? kRedColor : kGreenColor),
-                textColor: kTextLightColor,
-                height: 40,
-                minWidth: 150,
-                child: Row(
-                  // Replace with a Row for horizontal icon + text
-                  children: <Widget>[
-                    product.stockAmount <= 0
-                        ? Text("Stock Out ")
-                        : Text(
-                            product.stockAmount < 9999
-                                ? "Availability : " +
-                                    product.stockAmount.toString()
-                                : "Availability : ∞ ",
-                            textAlign: TextAlign.center,
-                          ),
-                    Icon(
-                      product.stockAmount <= 0 ? Icons.error_outline : null,
-                    ),
-                  ],
-                ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        CartCounter(
+          product: product,
+        ),
+        Row(
+          children: [
+            FlatButton(
+              onPressed: () => null,
+              color: (product.stockAmount <= 0 ? kRedColor : kGreenColor),
+              padding: EdgeInsets.all(12.0),
+              textColor: kTextLightColor,
+              height: 40,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment
+                    .center, //Center Column contents vertically,
+                crossAxisAlignment: CrossAxisAlignment
+                    .center, //Center Column contents horizontally,
+                // Replace with a Row for horizontal icon + text
+                children: <Widget>[
+                  product.stockAmount <= 0
+                      ? Text("Stock Out ")
+                      : Text(
+                          product.stockAmount < 9999
+                              ? "Available : " + product.stockAmount.toString()
+                              : "Available : ∞ ",
+                          textAlign: TextAlign.center,
+                        ),
+                  Icon(
+                    product.stockAmount <= 0 ? Icons.error_outline : null,
+                  ),
+                ],
               ),
-            ],
-          )
-        ],
-      ),
+            ),
+          ],
+        )
+      ],
     );
   }
 }

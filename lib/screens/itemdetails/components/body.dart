@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kenakata/constants.dart';
 import 'package:kenakata/models/product.dart';
-import 'package:kenakata/screens/itemdetails/components/add_to_cart_and_visit_shop.dart';
+import 'package:kenakata/screens/itemdetails/components/add_to_cart.dart';
 import 'package:kenakata/screens/itemdetails/components/productTitleWithImage.dart';
 import 'package:kenakata/screens/itemdetails/components/wishlist_measured_unit.dart';
 import 'package:kenakata/screens/itemdetails/components/description.dart';

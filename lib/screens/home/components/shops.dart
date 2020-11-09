@@ -13,8 +13,8 @@ class ShopCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    final double shopHeight = size.height / 8;
-    final double shopWidth = size.width / 3.6;
+    final double shopHeight = size.height / 6;
+    final double shopWidth = size.width / 3;
     return SingleChildScrollView(
       physics: BouncingScrollPhysics(),
       scrollDirection: Axis.horizontal,
@@ -45,7 +45,7 @@ class ShopCard extends StatelessWidget {
                     Text(
                       shop.title,
                       style: TextStyle(
-                          fontSize: 10,
+                          fontSize: 15,
                           color: kTextLightColor,
                           fontWeight: FontWeight.bold),
                     ),
@@ -56,13 +56,13 @@ class ShopCard extends StatelessWidget {
                           Text(
                             "Rating : " + shop.rating.toString(),
                             style: TextStyle(
-                              fontSize: 7,
+                              fontSize: 10,
                               color: kTextLightColor,
                             ),
                           ),
                           Icon(
                             Icons.star,
-                            size: 9,
+                            size: 12,
                             color: kOrangeColor,
                           )
                         ]),
@@ -70,11 +70,11 @@ class ShopCard extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       //crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: <Widget>[
-                        SizedBox(height: 40),
+                        SizedBox(height: 30),
                         Text(
                           "Visit Now  ",
                           style: TextStyle(
-                              fontSize: 7,
+                              fontSize: 10,
                               color: kTextLightColor,
                               fontWeight: FontWeight.bold),
                         ),
