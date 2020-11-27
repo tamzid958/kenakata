@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kenakata/constants.dart';
 import 'package:kenakata/screens/home/components/body.dart';
 import 'package:kenakata/screens/notifications/notifications.dart';
+import 'package:kenakata/screens/cart/cart.dart';
 
 class HomeScreen extends StatelessWidget {
   // This widget is the root of your application.
@@ -44,7 +45,12 @@ AppBar buildAppBar(BuildContext context) {
       IconButton(
         icon: Icon(Icons.shopping_bag_outlined),
         color: kTextColor,
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => CartScreen()),
+          );
+        },
       ),
       IconButton(
         icon: Icon(Icons.person_outline_rounded),

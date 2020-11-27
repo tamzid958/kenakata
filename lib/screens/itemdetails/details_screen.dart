@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kenakata/constants.dart';
 import 'package:kenakata/models/product.dart';
 import 'package:kenakata/screens/itemdetails/components/body.dart';
+import 'package:kenakata/screens/cart/cart.dart';
 
 class DetailsScreen extends StatelessWidget {
   final Product product;
@@ -30,7 +31,12 @@ class DetailsScreen extends StatelessWidget {
         IconButton(
           icon: Icon(Icons.shopping_bag_outlined),
           color: kTextLightColor,
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => CartScreen()),
+            );
+          },
         ),
         IconButton(
           icon: Icon(Icons.share_outlined),
