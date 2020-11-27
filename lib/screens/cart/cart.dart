@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kenakata/constants.dart';
-import 'package:kenakata/screens/cart/body.dart';
+import 'package:kenakata/screens/cart/components/body.dart';
 
 class CartScreen extends StatelessWidget {
   @override

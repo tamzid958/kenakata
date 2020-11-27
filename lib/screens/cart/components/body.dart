@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kenakata/constants.dart';
-import 'package:kenakata/screens/cart/cart_list.dart';
+import 'package:kenakata/screens/cart/components/cart_list.dart';
 import 'package:kenakata/models/cart.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -13,8 +13,7 @@ class BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:
-          EdgeInsets.symmetric(horizontal: KmodiPaddin),
+      padding: EdgeInsets.symmetric(horizontal: KmodiPaddin),
       child: ListView.builder(
         itemCount: demoCarts.length,
         itemBuilder: (context, index) => Padding(
