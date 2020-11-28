@@ -49,6 +49,7 @@ class ShopCard extends StatelessWidget {
                           color: kTextLightColor,
                           fontWeight: FontWeight.bold),
                     ),
+                    Spacer(),
                     Row(
                         // mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
