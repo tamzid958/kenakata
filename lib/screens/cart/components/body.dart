@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:kenakata/constants.dart';
 import 'package:kenakata/screens/cart/components/cart_list.dart';
 import 'package:kenakata/models/cart.dart';
-import 'package:flutter_svg/svg.dart';
 
 class Body extends StatefulWidget {
   @override
@@ -35,7 +34,7 @@ class BodyState extends State<Body> {
               child: Row(
                 children: [
                   Spacer(),
-                  SvgPicture.asset("assets/icons/Trash.svg"),
+                  Icon(Icons.delete, color: kRedColor),
                 ],
               ),
             ),
